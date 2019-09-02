@@ -2,6 +2,7 @@
 - The data encryption standard (DES) is a symmetric cipher algorithm that can process data blocks of 64 bits under the control of a 64-bit key. The DES core algorithm uses 56 bits for enciphering and deciphering, and 8 bits for parity, so the DES cipher key size is 56 bits
 - More info links:https://github.com/lbeatu/The-DES-Algorithm-Illustrated-for-C-code
 - A lot of times when you work on some project, you want to display data on computer. This can be done with USART peripheral on MCU. With USART you can connect more than just computer, you can connect with GSM modules, GPRS, bluetooth and so much more. Our discovery board supports up to 8 USART channels. In this tutorial we will use USART1 to show principle how to use USART in our project. But first, we have to initialize our pins and peripheral.
+- This example runs on STM32F407xx/417xx, STM32F429xx and STM32F439xx devices on STM32 Standard Peripheral Libraries.
 
 | U(S)ARTx  | TX  | RX | APB |                      
 | :------------ |:---------------:| -----:| -----:|
@@ -13,10 +14,15 @@
 | USART6      | PC6 | PC7 | 1 |
 | USART7      | PE8 | PE7 | 1 |
 | USART7      | PE1 | PE0 | 1 |
-
+#### Hyperterminal configuration:
+    - Word Length = 8 Bits
+    - One Stop Bit
+    - No parity
+    - BaudRate = 115200 baud
+    - flow control: None
 ### USART1 uses pins
-- PA9 for transmitting data
-- PA10 for receiving data;
+- PA9 -TX for transmitting data
+- PA10 -RX for receiving data;
 ![](http://2.bp.blogspot.com/-oaqvBEOZy_g/VTta340i9iI/AAAAAAAAAY0/IX7GS22VwS8/s1600/stm32f4%2Bto%2Bdb9.jpg)
 ### LED3 & LED4 uses pins
 - PG13 green led
