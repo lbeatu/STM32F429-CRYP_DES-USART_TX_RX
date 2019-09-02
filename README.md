@@ -107,7 +107,7 @@ TIM2 by default has clock of 84MHz, Here, we must set value of prescaler and per
 	NVIC_InitStruct.NVIC_IRQChannelCmd = ENABLE;
 	NVIC_Init(&NVIC_InitStruct);
 ```
-## Functions
+## Interrupt Functions
 ```javascript
 void TIM2_IRQHandler(void)//TIM2 interrupt function
 void USART1_IRQHandler(void)//USART1 interrupt function
